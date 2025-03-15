@@ -50,13 +50,9 @@ def ft_statistics(*args: any, **kwargs: any) -> None:
         "var": var
     }
     op_list = {op[item] for item in kwargs.values() if item in op}
-
+    l_args = [arg for arg in args if isinstance(arg, (int, float))]
     for func in op_list:
-        try:
-            l_args = [arg for arg in args if isinstance(arg, (int, float))]
-        except ValueError:
-            l_args = []
         if len(l_args) == 0:
             print('ERROR')
         else:
-            print(f'{func.__name__}: {func(args)}')
+            print(f'{func.__name__}: {func(l_args)}')
