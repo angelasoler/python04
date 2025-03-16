@@ -40,7 +40,7 @@ def var(args: tuple):
     return std(args) ** 2
 
 
-def ft_statistics(*args: any, **kwargs: any) -> None:
+def statistics(*args: any, **kwargs: any) -> None:
     """Prints the result of the operations specified in kwargs"""
     op = {
         "mean": mean,

@@ -2,7 +2,7 @@ import unittest
 import statistics
 import numpy as np
 
-from ft_statistics import mean, median, quartile, std, var
+from ex00.statistics import mean, median, quartile, std, var
 
 
 class TestStatisticsFunctions(unittest.TestCase):

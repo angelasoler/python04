@@ -1,11 +1,12 @@
-from ft_statistics import ft_statistics
-ft_statistics(1, 42, 360, 11, 64, toto="mean", tutu="median", tata="quartile")
+from ex00.statistics import statistics
+
+statistics(1, 42, 360, 11, 64, toto="mean", tutu="median", tata="quartile")
 print("-----")
-ft_statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
+statistics(5, 75, 450, 18, 597, 27474, 48575, hello="std", world="var")
 print("-----")
-ft_statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
+statistics(5, 75, 450, 18, 597, 27474, 48575, ejfhhe="heheh", ejdjdejn="kdekem")
 print("-----")
-ft_statistics(toto="mean", tutu="median", tata="quartile")
+statistics(toto="mean", tutu="median", tata="quartile")
 
 
 # expected:
