@@ -22,23 +22,8 @@ def outer(x: int | float, function) -> object:
 
     def inner() -> float:
         """Inner function"""
-        nonlocal count
-        result = 0
-        match function.__name__:
-            case "square":
-                result = 1
-                for i in range(2 ** count):
-                    result *= function(x)
-                count += 1
-            case "pow":
-                result = function(x)
-                for i in range(count):
-                    result = function(result)
-                count = 2 ** count
-            case _:
-                try:
-                    result = function(x)
-                except TypeError:
-                    print('Except a function with a number as argument')
-        return result
+        nonlocal x, count
+        count += 1
+        x = function(x)
+        return x
     return inner
